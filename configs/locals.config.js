@@ -1,3 +1,3 @@
 module.exports = app => {
-    app.locals.title = 'Backend generator'
+    app.locals.title = '_bookaria'
 }
