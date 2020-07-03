@@ -16,7 +16,7 @@ require('./configs/middleware.config')(app)
 require('./configs/views.configs')(app)
 require('./configs/locals.config')(app)
 
-// Base URLS
+// Routes index
 require('./routes')(app)
 
 module.exports = app
