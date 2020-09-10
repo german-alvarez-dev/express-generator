@@ -1,0 +1,26 @@
+<main class="Movie-det-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="{{image}}" alt="{{title}}">
+            </div>
+            <div class="col-9">
+               <a href="/movies">Go back</a>
+               <h1>{{title}}</h1>
+               <h2>{{Directo}}</h2>
+               <h3>Stars</h3>
+               <ul>
+                   {{#each stars}}
+                   <li>{{this}}</li>
+                   {{#/each}}
+               </ul>
+               <p>{{description}}</p>
+               <p>
+                   {{#each showtimes}}
+                   <span>{{this}} |</span>
+                   {{/each}}
+               </p>
+            </div>
+        </div>
+    </div>
+</main>
