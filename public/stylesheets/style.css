@@ -1,5 +1,17 @@
 body {
-  padding: 50px;
-  font-family: sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: black; }
+
+h1, h2, h3 {
+  font-weight: 100;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.nav-link {
+  color: white; }
+
+.celeb-list {
+  list-style: none; }
 
 /*# sourceMappingURL=style.css.map */
