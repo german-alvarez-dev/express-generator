@@ -1,3 +1,4 @@
+// DB connection
 require('./../config/db.config')
 
 
