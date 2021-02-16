@@ -8,5 +8,5 @@ Boilerplate for a basic ExpressJS backend
 
 ## Run
 
-- Create a `.env` file on the root directory to populate the database (`DB`) and port (`PORT`)
+- Create a `.env` file on the root directory to link the MongoDB URI (`MONGODB_URI`) and port (`PORT`)
 - Run `npm run dev` command on the root directory
