@@ -1,9 +1,10 @@
 const { join } = require('path')
+const sass = require('node-sass-middleware')
 
-module.exports = app => {
-    app.use(require('node-sass-middleware')({
-        src: join(__dirname, '..', 'public'),
-        dest: join(__dirname, '..', 'public'),
-        sourceMap: true
-    }))
+const options = {
+    src: join(__dirname, '..', 'public'),
+    dest: join(__dirname, '..', 'public'),
+    sourceMap: true
 }
+
+module.exports = app => app.use(sass(options))
