@@ -1,4 +1,4 @@
-# ExpressJS boilerplate
+# ExpressJS server boilerplate
 
 <img src="https://buttercms.com/static/images/tech_banners/webp/ExpressJS.b7bdb4190ea4.webp" alt="ExpressJS" width="500"/>
 
