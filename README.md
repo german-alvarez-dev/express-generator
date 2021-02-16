@@ -1,8 +1,8 @@
 # ExpressJS boilerplate
 
-![](https://buttercms.com/static/images/tech_banners/webp/ExpressJS.b7bdb4190ea4.webp)
+<img src="https://buttercms.com/static/images/tech_banners/webp/ExpressJS.b7bdb4190ea4.webp" alt="ExpressJS" width="500"/>
 
-------------
+<hr>
 
 ExpressJS backend boilerplate including:
 - **Views Template**: Handlebars
@@ -60,7 +60,7 @@ express-generator/
 │   │── middleware.config.js
 │   │── sass.config.js
 │   └── views.config.js
-├── bin
+└── bin
     ├── seeds.js
     ├── www
 
