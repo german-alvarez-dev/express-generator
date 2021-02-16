@@ -61,8 +61,8 @@ express-generator/
 │   │── sass.config.js
 │   └── views.config.js
 ├── bin
-│   ├── seeds.js
-│   ├── www
+    ├── seeds.js
+    ├── www
 
 ````
 
