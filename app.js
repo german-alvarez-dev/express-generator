@@ -1,20 +1,23 @@
 require('dotenv').config()
 
-// Database
-require('./configs/mongoose.config')
+// DB connection
+require('./config/db.config')
 
-// Debugger
-require('./configs/debugger.config')
+// Debug
+require('./config/debug.config')
+
+// HBS
+require('./config/hbs.config')
 
 // App
 const express = require('express')
 const app = express()
 
-// Configs
-require('./configs/preformatter.config')(app)
-require('./configs/middleware.config')(app)
-require('./configs/views.configs')(app)
-require('./configs/locals.config')(app)
+// App settings
+require('./config/sass.config')(app)
+require('./config/middleware.config')(app)
+require('./config/views.config')(app)
+require('./config/locals.config')(app)
 
 // Routes index
 require('./routes')(app)

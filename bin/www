@@ -1,46 +1,38 @@
 #!/usr/bin/env node
 
-const http = require('http');
+// Require app and try to access valid routes
+let app = require('../app')
 
-let app = require('../app');
+// Catch 404 error in case no route matches and render not-found template
+app.use((req, res) => res.status(404).render('errors/not-found'))
 
-// catch 404 and render a not-found.hbs template
-app.use((req, res, next) => {
-  res.status(404);
-  res.render('not-found');
-});
-
-app.use((err, req, res, next) => {
-  // always log the error
-  console.error('ERROR', req.method, req.path, err);
-
-  // only render if the error ocurred before sending the response
+// Catch 500 error in case of server error, log it and render error template
+app.use((err, req, res) => {
+  console.error('Server error:', req.method, req.path, err)
   if (!res.headersSent) {
-    res.status(500);
-    res.render('error');
+    res.status(500).render('errors/server-error')
   }
-});
+})
 
-let server = http.createServer(app);
+const http = require('http')
+let server = http.createServer(app)
 
+// Handle and log specific listen errors
 server.on('error', error => {
   if (error.syscall !== 'listen') { throw error }
-
-  // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(`Port ${process.env.PORT} requires elevated privileges`);
-      process.exit(1);
-      break;
+      console.error(`Port ${process.env.PORT} requires elevated privileges`)
+      process.exit(1)
+      break
     case 'EADDRINUSE':
-      console.error(`Port ${process.env.PORT} is already in use`);
-      process.exit(1);
-      break;
+      console.error(`Port ${process.env.PORT} is already in use`)
+      process.exit(1)
+      break
     default:
-      throw error;
+      throw error
   }
-});
+})
 
-server.listen(process.env.PORT, () => {
-  console.log(`Listening on http://localhost:${process.env.PORT}`);
-});
+// Go!
+server.listen(process.env.PORT, () => console.log(`Listening on http://localhost:${process.env.PORT}`))
