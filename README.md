@@ -1,16 +1,17 @@
 # Express generator
+![](https://buttercms.com/static/images/tech_banners/webp/ExpressJS.b7bdb4190ea4.webp)
 
 ExpressJS backend boilerplate including:
+- **Views Template**: Handlebars
+- **CSS Engine**: SCSS - Node-sass-middleware
+- **ODM**: Mongoose
+- **UI Framework**: Bootstrap 
 
-- Views Template: Handlebars
-- CSS Engine: SCSS - Node-sass-middleware
-- ODM: Mongoose
-- UI Framework: Bootstrap 
 
 Prepopulated with Express middlewares:
-- Logger: morgan
-- HTTP POST Params: body-parser
-- Cookies: cookie-parser
+- **Logger**: morgan
+- **HTTP POST Params**: body-parser
+- **Cookies**: cookie-parser
 
 Facilities:
 - Gitignore file
@@ -70,5 +71,3 @@ express-generator/
 
 - Create a `.env` file on the root directory to link the MongoDB URI (`MONGODB_URI`) and port (`PORT`)
 - Run `npm run dev` command on the root directory
-
-## 
