@@ -62,7 +62,7 @@ express-generator/
 │   └── views.config.js
 └── bin
     ├── seeds.js
-    ├── www
+    └── www
 
 ````
 
