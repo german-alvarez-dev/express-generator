@@ -1,5 +1,8 @@
-# Express generator
+# ExpressJS boilerplate
+
 ![](https://buttercms.com/static/images/tech_banners/webp/ExpressJS.b7bdb4190ea4.webp)
+
+------------
 
 ExpressJS backend boilerplate including:
 - **Views Template**: Handlebars
